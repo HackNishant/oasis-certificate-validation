@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-chart-pie"></i>OASIS INFOBYTE</a>
+        <div class="fas fa-bars"></div>
+    </header>
+
+    <div class="container">
+        <div class="title">Certificate Verification</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Certificate Id</span>
+                        <input type="text" id="cid" placeholder="Enter your certificate id" required autocomplete="off">
+                    </div>
+                </div>
+                <button id="btncls" class="buttonload" onclick="verified()">
+                    Verify
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function verified() {
+            var btn = document.getElementById("btncls");
+            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Loading';
+
+            // Display "Verified" alert after a delay
+            setTimeout(() => {
+                alert("Your Certificate is Verified!");
+                location.href = './validate.html';
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
